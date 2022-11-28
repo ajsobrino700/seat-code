@@ -5,16 +5,15 @@ import es.seat.code.infraestructure.model.Mower;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import es.seat.code.infraestructure.enumeration.OrientationEnum;
 
 
-class TurnRightTest {
+public class TurnRightTest {
 
     private TurnRight turnRight = new TurnRight();
 
     @Test
-    public void turnRightTest(){
+    public void testTurnRight(){
         Mower mower = DummyMowerFactory.build();
 
         this.turnRight.execute(mower);
@@ -23,7 +22,7 @@ class TurnRightTest {
     }
 
     @Test
-    public void turnRightOutRangeTest(){
+    public void testTurnRightOutRange(){
 
         Mower mower = DummyMowerFactory.build(OrientationEnum.W);
 

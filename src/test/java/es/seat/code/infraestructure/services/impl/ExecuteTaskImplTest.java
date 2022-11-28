@@ -1,6 +1,5 @@
 package es.seat.code.infraestructure.services.impl;
 
-import com.ibm.jvm.Dump;
 import es.seat.code.dummy.DummyGridFactory;
 import es.seat.code.dummy.DummyMowerTaskFactory;
 import es.seat.code.infraestructure.enumeration.ActionEnumeration;
@@ -14,12 +13,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ExecuteTaskImplTest {
+public class ExecuteTaskImplTest {
 
     private ExecuteTaskImpl executeTask = new ExecuteTaskImpl();
 
     @Test
-    void executeTaskOutRangeXTest(){
+    public void testExecuteTaskOutRangeX(){
 
         LinkedList<ActionEnumeration> actions = new LinkedList<>(Arrays.asList(ActionEnumeration.M,ActionEnumeration.M,ActionEnumeration.M,ActionEnumeration.M,ActionEnumeration.M));
 
@@ -27,7 +26,7 @@ class ExecuteTaskImplTest {
     }
 
     @Test
-    void executeTaskOutRangeYTest(){
+    public void testExecuteTaskOutRangeY(){
 
         LinkedList<ActionEnumeration> actions = new LinkedList<>(Arrays.asList(ActionEnumeration.M,ActionEnumeration.M,ActionEnumeration.M,ActionEnumeration.M,ActionEnumeration.M));
 
@@ -35,7 +34,7 @@ class ExecuteTaskImplTest {
     }
 
     @Test
-    void executeTaskTest(){
+    public void testExecuteTask(){
 
         LinkedList<ActionEnumeration> actions = new LinkedList<>(Arrays.asList(ActionEnumeration.L,ActionEnumeration.M,ActionEnumeration.R,ActionEnumeration.M,ActionEnumeration.M));
         MowerTask mowerTask = DummyMowerTaskFactory.build(actions, OrientationEnum.N);

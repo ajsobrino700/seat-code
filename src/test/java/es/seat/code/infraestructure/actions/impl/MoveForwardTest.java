@@ -10,12 +10,12 @@ import es.seat.code.infraestructure.enumeration.OrientationEnum;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-class MoveForwardTest {
+public class MoveForwardTest {
 
     private MoveForward moveForward = new MoveForward();
 
     @Test
-    public void turnMoveEastTest(){
+    public void testTurnMoveEast(){
         Mower mower = DummyMowerFactory.build(OrientationEnum.E);
         GridPoint point = currenPoint(mower);
 
@@ -27,7 +27,7 @@ class MoveForwardTest {
 
 
     @Test
-    public void turnMoveWestTest(){
+    public void testTurnMoveWest(){
         Mower mower = DummyMowerFactory.build(OrientationEnum.W);
         GridPoint point = currenPoint(mower);;
 
@@ -38,7 +38,7 @@ class MoveForwardTest {
     }
 
     @Test
-    public void turnMoveNorthTest(){
+    public void testTurnMoveNorth(){
         Mower mower = DummyMowerFactory.build(OrientationEnum.N);
         GridPoint point = currenPoint(mower);
 
@@ -49,7 +49,7 @@ class MoveForwardTest {
     }
 
     @Test
-    public void turnMoveSouthTest(){
+    public void testTurnMoveSouth(){
         Mower mower = DummyMowerFactory.build(OrientationEnum.S);
         GridPoint point = currenPoint(mower);
 

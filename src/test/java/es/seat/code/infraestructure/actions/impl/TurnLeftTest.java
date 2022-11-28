@@ -9,12 +9,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 import es.seat.code.infraestructure.enumeration.OrientationEnum;
 
 
-class TurnLeftTest {
+public class TurnLeftTest {
 
     private TurnLeft turnLeft = new TurnLeft();
 
     @Test
-    public void turnLeftTest(){
+    public void testTurnLeft(){
         Mower mower = DummyMowerFactory.build();
 
         this.turnLeft.execute(mower);
@@ -23,7 +23,7 @@ class TurnLeftTest {
     }
 
     @Test
-    public void turnLeftOutRangeTest(){
+    public void testTurnLeftOutRange(){
 
         Mower mower = DummyMowerFactory.build(OrientationEnum.N);
 
